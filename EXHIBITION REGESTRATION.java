@@ -7,8 +7,8 @@
  *
 
  */
-// File: ExhibitionGUI.java
-// Purpose: Swing GUI for user interaction
+
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -30,25 +30,24 @@ public class ExhibitionGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(600, 500);
 
-        // Form setup
+    
         JPanel formPanel = new JPanel(new GridLayout(7, 2));
         addField(formPanel, "Registration ID:", regIdField = new JTextField());
         addField(formPanel, "Student Name:", nameField = new JTextField());
-        // Add other fields...
+  
 
-        // Buttons
         JPanel buttonPanel = new JPanel();
         addButton(buttonPanel, "Register", e -> registerParticipant());
         addButton(buttonPanel, "Search", e -> searchParticipant());
-        // Add other buttons...
+    
 
-        // Image upload
+        
         JButton uploadBtn = new JButton("Upload Image");
         uploadBtn.addActionListener(e -> uploadImage());
         buttonPanel.add(uploadBtn);
         imageLabel = new JLabel("No image selected", SwingConstants.CENTER);
 
-        // Add components to frame
+       
         frame.add(formPanel, BorderLayout.CENTER);
         frame.add(buttonPanel, BorderLayout.SOUTH);
         frame.add(imageLabel, BorderLayout.NORTH);
@@ -73,7 +72,7 @@ public class ExhibitionGUI {
         }
     }
 
-    // Helper methods
+ 
     private void addField(JPanel panel, String label, JTextField field) {
         panel.add(new JLabel(label));
         panel.add(field);
